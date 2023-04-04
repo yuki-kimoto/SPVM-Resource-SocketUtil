@@ -18,6 +18,7 @@ unless ($meta) {
 
 }
 
+my %configure_and_runtime_requires = ('SPVM' => '0.9701');
 WriteMakefile(
   NAME              => 'SPVM::Resource::SocketUtil',
   VERSION_FROM      => 'lib/SPVM/Resource/SocketUtil.pm',
@@ -42,11 +43,10 @@ WriteMakefile(
   },
   NORECURS => 1,
   CONFIGURE_REQUIRES => {
-    # SPVM::Builder::Util::API is needed for Makefile.PL
-    'SPVM'              => '0.9662',
+    %configure_and_runtime_requires,
   },
-  PREREQ_PM => {
-    
+  PREREQ_PM         => {
+    %configure_and_runtime_requires,
   },
   TEST_REQUIRES => {
     
