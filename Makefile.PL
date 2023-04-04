@@ -3,7 +3,20 @@ use ExtUtils::MakeMaker;
 use strict;
 use warnings;
 use Config;
-use SPVM::Builder::Util::API;
+use Getopt::Long 'GetOptions';
+
+GetOptions(
+  'meta' => \my $meta,
+  'no-build-spvm-modules' => \my $no_build_spvm_modules,
+);
+
+if ($meta) {
+  $no_build_spvm_modules = 1;
+}
+
+unless ($meta) {
+
+}
 
 WriteMakefile(
   NAME              => 'SPVM::Resource::SocketUtil',
@@ -11,7 +24,7 @@ WriteMakefile(
   LICENSE           => 'perl_5',
   ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
     (ABSTRACT_FROM  => 'lib/SPVM/Resource/SocketUtil.pm',
-     AUTHOR         => 'USER_NAME<USER_MAIL>') : ()),
+     AUTHOR         => 'Yuki Kimoto<kimoto.yuki@gmail.com>') : ()),
   test => {TESTS => 't/*.t t/*/*.t t/*/*/*.t'},
   clean => {FILES => ['.spvm_build', 't/.spvm_build']},
   META_MERGE => {
@@ -44,8 +57,9 @@ sub MY::postamble {
 
   my $make_rule = '';
   
-  
-  
+  unless ($no_build_spvm_modules) {
+    require SPVM::Builder::Util::API;
+  }
   
   return $make_rule;
 }
