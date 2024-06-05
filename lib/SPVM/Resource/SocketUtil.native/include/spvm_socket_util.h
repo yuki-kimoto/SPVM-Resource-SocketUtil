@@ -1,8 +1,8 @@
 // Copyright (c) 2023 Yuki Kimoto
 // MIT License
 
-#ifndef SPVM__SOCKET_UTIL_H
-#define SPVM__SOCKET_UTIL_H
+#ifndef SPVM_SOCKET_UTIL_H
+#define SPVM_SOCKET_UTIL_H
 
 #include "spvm_native.h"
 
