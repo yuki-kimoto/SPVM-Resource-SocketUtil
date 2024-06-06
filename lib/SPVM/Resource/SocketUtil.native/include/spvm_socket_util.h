@@ -39,4 +39,6 @@ void* spvm_socket_strerror_string (SPVM_ENV* env, SPVM_VALUE* stack, int32_t err
 
 const char* spvm_socket_strerror(SPVM_ENV* env, SPVM_VALUE* stack, int32_t error_number, int32_t length);
 
+const char* spvm_socket_strerror_nolen(SPVM_ENV* env, SPVM_VALUE* stack, int32_t error_number);
+
 #endif
