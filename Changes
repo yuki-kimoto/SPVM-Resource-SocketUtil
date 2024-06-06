@@ -7,7 +7,9 @@
     
       struct sockaddr_un
     * Add spvm_socket_strerror_nolen function to spvm_socket_util.h.
-    
+  [Document Improvmenet]
+    * Add documents for spvm_socket_util.h.
+  
 1.001  2023-05-03
   [New Features]
     * The version string can be got.
