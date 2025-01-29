@@ -10,7 +10,7 @@ SPVM::Resource::SocketUtil - Resource for Socket Utilities
 
 =head1 Description
 
-Resource::SocketUtil class in L<SPVM> is a L<resource|SPVM::Document::Resource> for socket utilities.
+Resource::SocketUtil class in L<SPVM> is a L<resource|SPVM::Document::Resource> class for socket utilities.
 
 =head1 Usage
 
