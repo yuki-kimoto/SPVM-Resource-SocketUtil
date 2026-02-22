@@ -16,7 +16,7 @@ Resource::SocketUtil class in L<SPVM> is a L<resource|SPVM::Document::Resource> 
 
 MyClass.config:
   
-  my $config = SPVM::Builder::Config->new_gnu99(file => __FILE__);
+  my $config = SPVM::Builder::Config->new_c99;
   
   $config->use_resource('Resource::SocketUtil');
   
@@ -36,9 +36,9 @@ MyClass.c:
 
 The C language
 
-=head1 Language Specification
+=head1 Language Standard
 
-GNU C99
+C99
 
 =head1 Required Libraries
 
